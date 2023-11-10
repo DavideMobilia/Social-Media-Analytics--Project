@@ -1,15 +1,11 @@
-In the folder, you will find the report (Report_SMA.pdf), the PowerPoint presentation (SMA_project.pptx), the data, and the Python code.
+Abstract:
+This project aims to analyze the network formed on social media, particularly Twitter, around discussions on the topic of COVID-19. Specifically, we examined tweets related to the vaccine and green pass themes and how different communities interact with each other. The analysis focuses on the opposing positions between those in favor of vaccines and those, like the anti-vax movement, who see them as imposition and criticize the related government measures. Additionally, interactions between these two main clusters and certain political currents were extracted for further analysis. The objective of this second analysis is to determine if certain political and social positions are more aligned with anti-vaccine expressions rather than pro-vaccine and green pass sentiments.
 
---DATA
+Data and Collection:
+Data collection was conducted using two hashtags: #NoGreenPass and "#vaccinatevi." This allowed for a clear identification of diverse positions regarding the discussed topic – individuals against vaccines and restrictions on one side, and those in favor encouraging vaccination on the other. One of the main challenges was identifying distinct clusters, given the ambiguity of hashtags like #novax and #covid19, which were common denominators for most tweets of either category.
 
-- Edges_df6.csv: dataframe containing the edges of the graph, used as input in Gephi for visualization creation.
-- Nodes_definitivo.csv: dataframe containing the nodes of the graph, used as input in Gephi for visualization creation. It is specified that this file is the output after executing the graph.ipynb code.
-- retweeted_sentiment.csv: dataframe containing the texts of tweets that have been retweeted. The file contains the result after executing the Sentiment.ipynb code.
-- sentix.txt: lexicon used for sentiment analysis with Vader.
+In addition to this collection, specific hashtags and mentions representing prominent political forces or movements related to pro/anti-vaccine campaigns were selected, including "@CasaPoundItalia," "@matteosalvinimi," and "@EnricoLetta."
 
---CODE
+The collection took place on December 30, 2021, coinciding with the issuance of the new decree on the Super Green Pass, to analyze reactions from different perspectives. For each hashtag or mention, 5000 tweets were extracted using the Twitter API. The graph creation focused on studying user interactions based on retweets. The analysis centered on users, and the collected tweets and retweets were aggregated per user.
 
-- Tweets.ipynb: code for data collection through Twitter.
-- graph.ipybn: code for performing community detection and performance evaluation.
-- evaluation.ipynb: code for performing evaluations on the graph and its related measures.
-- Sentiment.ipynb: code for performing sentiment analysis.
+In total, 5634 nodes were identified, corresponding to all users involved in retweet interactions – those who tweeted and those who retweeted. Among these users, 9273 edges were identified, each corresponding to a retweet. It is noteworthy that in the extracted network, some users who were retweeted also retweeted other users in the network. Simultaneously, many users retweeted multiple users present in the same network.
